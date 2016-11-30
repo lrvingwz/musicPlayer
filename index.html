@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+	<title>Music Player</title>
+	<link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="lib/swiper/swiper.min.css">
+	<link rel="stylesheet" type="text/css" href="lib/font/iconfont.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<script src="lib/zepto/dist/zepto.min.js"></script>
+	<script src="lib/zepto/src/touch.js"></script>
+	<script src="lib/swiper/swiper.jquery.min.js"></script>
+	<script src="cordova.js"></script>
+	<script src="js/index.js"></script>
+</head>
+<body>
+	<header id="header">
+		<div id="news" class="active">最新单曲</div>
+		<div id="myLike">正在播放</div>
+		<div id="friend">我的音乐</div>
+	</header>
+		<div class="search">
+			<input type="text" name="" placeholder="输入歌曲信息" list="music_list">
+			<span class="glyphicon glyphicon-search" id="btnSearch"></span>
+		</div>
+		<div class="swiper-container player">
+			<div class="swiper-wrapper">
+
+				<section class="list swiper-slide">
+				</section>
+				<section class="mySongs swiper-slide">
+					<div class="info">
+						<span class="col-xs-4 album">专辑：XXX</span>
+						<span class="col-xs-4 singer">歌手：XXX</span>
+						<span class="col-xs-4 source">来源：XXX</span>
+					</div>
+					<div class="lyric"></div>
+				</section>
+				<section class="playing swiper-slide">
+					<ul></ul>
+				</section>
+			</div>
+		</div>
+	<footer>
+		<div class="play-main">
+			<span class="iconfont icon-previous" id="btnPrev"></span>
+			<span class="portrait">
+				<img src="img/modeo05.jpg">
+				<span class="iconfont icon-play" id="btnPlay"></span>
+			</span>
+			<span class="iconfont icon-next" id="btnNext"></span>
+			<span class="iconfont icon-audio" id="btnVolume"></span>
+		</div>
+		<section class="controls">
+			<h1 class="title">陈奕迅-十年</h1>
+			<span class="iconfont icon-like" id="btnLike"></span>
+			<div class="play-status">
+				<progress max="100" value="0"></progress>
+				<time class="left">-00:16</time>
+			</div>
+			<div class="play-model">
+				<span class="iconfont icon-random" data-model="4" title="随机播放"></span>
+				<span class="iconfont icon-list" data-model="2" title="列表播放"></span>
+				<span class="iconfont icon-list-loop" data-model="3" title="列表循环"></span>
+				<span class="iconfont icon-loop" data-model="1" title="单曲循环"></span>
+			</div>
+		</section>
+	</footer>
+</body>
+</html>

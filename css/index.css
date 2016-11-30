@@ -1,0 +1,128 @@
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+html,body{height: 100%;width: 100%;overflow: hidden;}
+#header{
+	background: url(../img/topbar.png) repeat-x 0 -80px;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	border-bottom: 2px solid #840201;
+	width: 100%;
+	position: fixed;
+	left: 0;top: 0;
+}
+#header div{
+	flex: 1;
+	text-align: center;
+	height: 48px;
+	line-height: 48px;
+	font-size: 18px;
+}
+#header div.active{
+	background: url(../img/topbar.png) repeat-x 0 -154px;
+}
+body{font-family:'微软雅黑';color: #e9e8e8;background: #191B1F;}
+ul{padding:0;margin:0;list-style:none;}
+footer .iconfont{color:#666;}
+footer{padding:10px 10px;background-color: #272727;position: fixed;
+	left: 0;bottom: 0;width: 100%;z-index: 100;}
+
+.play-main{position:relative;text-align:center;}
+.play-main > span{margin:0 5px;font-size:40px;}
+/*.play-main span:hover,.play-model span:hover{color:#f90;}*/
+.play-main .icon-audio{position:absolute;top:50%;right:2vw;margin-top:-10px;font-size:20px;}
+
+.portrait{display:inline-block;position:relative;}
+.portrait img{padding:2px;width:110px;height:110px;border:2px solid #ababab;border-radius: 50%;box-sizing:border-box;vertical-align: middle;}
+.portrait img.playing{animation:rotatePic 10s linear infinite;}
+.portrait span{position:absolute;left:50%;top:50%;margin:-20px 0 0 -20px;width:40px;height:40px;line-height:40px;background-color:rgba(255,255,255,.8);vertical-align: middle;font-size:40px;border-radius:50%;}
+
+.controls{position: relative;}
+.controls .title{font-size:20px;margin: 0;}
+.controls span.icon-like{position:absolute;top:0;right:15vw;font-size:20px;}
+.controls span.active{color: #9c0705}
+.play-status{padding:5px 0;}
+.play-status *{display:inline-block;vertical-align: middle;}
+.play-status progress{width:80%;height:10px;border:none;}
+.play-status time{width:15%;overflow:hidden;text-align:center;color:#999;}
+
+.play-model{padding-right:10px;text-align:right;}
+.play-model span{margin:0 3px;font-size:20px;}
+.play-model span.active{color:#f60;}
+
+.player{width: 100%;position: fixed;top: 80px;bottom: 211px;overflow-y:auto;}
+.player section{width: 100%;overflow-x: hidden;}
+.player .mySongs{
+	background-image: url(../img/modeo05.jpg); 
+	background-size: cover;
+	background-color: rgba(0,0,0,0.5);
+}
+.player .mySongs .info{
+	color: #d43f3a;
+	overflow: hidden;
+}
+.player .mySongs .info span{
+	height: 20px;
+	line-height: 20px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	padding: 0 5px;
+}
+.player .mySongs .lyric{
+	margin-top: 2vw;
+}
+.player .mySongs .lyric li{
+	color:  #0755f1;
+	/*text-shadow: 2px 2px 2px #000;*/
+	padding: 0 2vw;
+	font-weight: bold;
+	text-align: center;
+}
+.player .mySongs .lyric li.active{
+	color: #f60;
+}
+.list #music_list{display: block;}
+.list option,.playing ul li{line-height:2;padding-left: 1vw;color: #DCDDE4;font-size: 1.5rem;}
+.list option:nth-child(2n){background: #1B1D20;}
+.list option:nth-child(2n-1){background: #16181C;}
+.list option:hover{background-color: #2D2F32;}
+.list option:last-child{border:none;}
+.list option.active{color:#B82525;}
+.search{
+	background: #2D2F32;
+	height: 30px;
+	line-height: 30px;
+	position: fixed;
+	left: 0;top: 50px;
+	width: 100%;
+	overflow: hidden;
+}
+.search input{
+	background: #212327;
+	width: 80%;
+	border-radius: 3vw;
+	height: 26px;
+	line-height: 26px;
+	margin-right: 2vw;
+	padding-left: 2vw;
+	float: left;
+	margin-top: 2px;
+}
+.search span{
+	color: #a9a9a9;
+	float: left;
+	height: 30px;
+	line-height: 30px;
+	font-size: 20px;
+}
+
+@keyframes rotatePic {
+	0%{transform:rotate(0deg);}
+	100%{transform:rotate(360deg);}
+}
